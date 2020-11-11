@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:minWidth="25px"
+	android:minHeight="25px"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/relativeLayout1"
+	android:background="#ff263238">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="60dp"
+		android:id="@+id/relativeLayout2">
+		<TextView
+			android:text="RUB/USD"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:id="@+id/textViewKey"
+			android:textColor="@android:color/white"
+			android:gravity="center"
+			android:textSize="@dimen/abc_action_bar_content_inset_material"/>
+
+	</RelativeLayout>
+	<EditText
+		android:id="@+id/userInput"
+		android:textAlignment="viewEnd"
+		android:gravity = "right|center"
+		android:enabled="true"
+		android:text = "0"
+		android:textColor="@android:color/black"
+		android:layout_width="200dp"
+		android:layout_height="60dp"
+		android:inputType="numberDecimal"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="61dp"
+		android:background="#FFFFFF"
+		android:textCursorDrawable="@null"
+		android:ems="10"
+		android:layout_marginLeft="90dp" />
+	<Button
+		android:text="Sell"
+		android:layout_width="100dp"
+		android:layout_height="60dp"
+		android:layout_marginLeft="100dp"
+		android:layout_marginTop="125dp"
+		android:id="@+id/SellButton"
+		android:gravity="center"
+		android:textColor="@color/Red"
+		android:textStyle="bold"
+		android:textSize="30dp" />
+	<TextView
+		android:text="SPrice"
+		android:layout_width="100dp"
+		android:layout_height="60dp"
+		android:layout_marginLeft="100dp"
+		android:layout_marginTop="185dp"
+		android:id="@+id/sellPrice"
+		android:gravity="center"
+		android:textColor="@android:color/white"
+		android:textStyle="bold"
+		android:textSize="30dp"/>
+	<Button
+		android:text="BuyPrice"
+		android:layout_width="100dp"
+		android:layout_height="60dp"
+		android:layout_marginLeft="210dp"
+		android:layout_marginTop="125dp"
+		android:id="@+id/BuyButton"
+		android:gravity="center"
+		android:textColor="@color/Red"
+		android:textStyle="bold"
+		android:textSize="30dp"/>
+	<TextView
+		android:text="BPrice"
+		android:layout_width="100dp"
+		android:layout_height="60dp"
+		android:layout_marginLeft="210dp"
+		android:layout_marginTop="185dp"
+		android:id="@+id/buyPrice"
+		android:gravity="center"
+		android:textColor="@android:color/white"
+		android:textStyle="bold"
+		android:textSize="30dp"/>
+	<TextView
+		android:id="@+id/resultTextView"
+		android:gravity = "right|center"
+		android:text = "0"
+		android:textColor="@android:color/white"
+		android:layout_width="200dp"
+		android:layout_height="60dp"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="250dp"
+		android:background="@android:color/black"
+		android:textSize="@dimen/abc_action_bar_content_inset_material"
+		android:layout_marginLeft="90dp" />
+</RelativeLayout>

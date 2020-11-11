@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_marginTop="1dp"
+	android:layout_height="40dp"
+	android:gravity = "center_vertical"
+	android:background="@color/primary_dark_material_dark">
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_marginTop="1dp"
+		android:layout_height="50dp"
+		android:id="@+id/linearLayout1"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_marginBottom="0.0dp">
+		<TextView
+			android:text="CurrencyName"
+			android:textSize="@dimen/abc_action_bar_content_inset_material"
+			android:gravity="left"
+			android:layout_width="160.0dp"
+			android:layout_height="match_parent"
+			android:id="@+id/CurrencyName"
+			android:layout_marginLeft="10dp"
+			android:textColor="@android:color/white"/>
+
+		<TextView
+			android:text="Selling price"
+			android:textSize="@dimen/abc_action_bar_content_inset_material"
+			android:gravity="center"
+			android:layout_width="75dp"
+			android:layout_height="match_parent"
+			android:id="@+id/SellingPrice"
+			android:layout_marginLeft="28dp"
+			android:textColor="@android:color/white"/>
+		<TextView
+			android:text="PurchasePrice"
+			android:textSize="@dimen/abc_action_bar_content_inset_material"
+			android:gravity="center"
+			android:layout_width="75dp"
+			android:layout_height="match_parent"
+			android:id="@+id/PurchasePrice"
+			android:layout_marginLeft="28dp"
+			android:textColor="@android:color/white" />
+
+
+	</LinearLayout>
+	
+</RelativeLayout>
+
+
+
+
