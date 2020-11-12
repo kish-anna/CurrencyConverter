@@ -14,6 +14,7 @@
         <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
         <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
         <ProvisioningType>automatic</ProvisioningType>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
         <DebugSymbols>true</DebugSymbols>
@@ -137,24 +138,19 @@
         <Compile Include="Main.cs" />
         <Compile Include="AppDelegate.cs" />
         <Compile Include="SceneDelegate.cs" />
-        <Compile Include="ViewController.cs" />
-        <Compile Include="ViewController.designer.cs">
-            <DependentUpon>ViewController.cs</DependentUpon>
-        </Compile>
         <Compile Include="CurrencyCollectionView.cs" />
         <Compile Include="CurrencyCollectionView.designer.cs">
           <DependentUpon>CurrencyCollectionView.cs</DependentUpon>
         </Compile>
         <Compile Include="CollectionSource.cs" />
         <Compile Include="CurrencyOptions.cs" />
-        <Compile Include="CurrencyRate.cs" />
         <Compile Include="CurrencyCell_.cs" />
         <Compile Include="CurrencyCell_.designer.cs">
           <DependentUpon>CurrencyCell_.cs</DependentUpon>
         </Compile>
-        <Compile Include="PurchasePriceLabel.cs" />
-        <Compile Include="PurchasePriceLabel.designer.cs">
-          <DependentUpon>PurchasePriceLabel.cs</DependentUpon>
+        <Compile Include="ViewResultController.cs" />
+        <Compile Include="ViewResultController.designer.cs">
+          <DependentUpon>ViewResultController.cs</DependentUpon>
         </Compile>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
