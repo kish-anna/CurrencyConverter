@@ -143,7 +143,6 @@
           <DependentUpon>CurrencyCollectionView.cs</DependentUpon>
         </Compile>
         <Compile Include="CollectionSource.cs" />
-        <Compile Include="CurrencyOptions.cs" />
         <Compile Include="CurrencyCell_.cs" />
         <Compile Include="CurrencyCell_.designer.cs">
           <DependentUpon>CurrencyCell_.cs</DependentUpon>
@@ -152,6 +151,12 @@
         <Compile Include="ViewResultController.designer.cs">
           <DependentUpon>ViewResultController.cs</DependentUpon>
         </Compile>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Portable\Portable.csproj">
+        <Project>{6f59b906-8d97-4d4f-b877-56098e19c61d}</Project>
+        <Name>Portable</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

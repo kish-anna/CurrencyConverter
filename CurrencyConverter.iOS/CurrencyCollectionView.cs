@@ -1,4 +1,5 @@
 using System;
+using Portable;
 using UIKit;
 
 namespace CurrencyConverter.iOS
@@ -13,7 +14,7 @@ namespace CurrencyConverter.iOS
         {
             base.AwakeFromNib();
 
-            DataSource = new CollectionSource(this);
+            DataSource = new CollectionSource(this, CurrencyKeyData.Data);
             // Delegate = new WaterfallCollectionDelegate(this);
         }
     }

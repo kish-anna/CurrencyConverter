@@ -1,5 +1,6 @@
 ﻿using System;
 using UIKit;
+using Portable;
 
 namespace CurrencyConverter.iOS
 {
@@ -9,8 +10,11 @@ namespace CurrencyConverter.iOS
         public float SellingPriceValue = 0;
         public float PurchasePriceValue = 0;
 
+        private ICalc calc;
+        
         public ViewResultController(IntPtr handle) : base(handle)
         {
+            calc = new Result();
         }
 
         public override void ViewDidLoad()
@@ -27,38 +31,16 @@ namespace CurrencyConverter.iOS
             SellButton.TouchUpInside -= SellTouch;
             SellButton.TouchUpInside += SellTouch;
         }
-
+        
         void BuyTouch(object sender, EventArgs args)
         {
-            float userInputFloat = 0;
-
-            try
-            {
-                userInputFloat = Convert.ToSingle(Input.Text);
-            }
-            catch (Exception ex)
-            {
-            }
-
-            var result = userInputFloat * PurchasePriceValue;
-
+            float result = calc.GetResult(PurchasePriceValue, Input.Text);
             Result.Text = result.ToString();
         }
-        
+         
         void SellTouch(object sender, EventArgs args)
         {
-            float userInputFloat = 0;
-
-            try
-            {
-                userInputFloat = Convert.ToSingle(Input.Text);
-            }
-            catch (Exception ex)
-            {
-            }
-
-            var result = userInputFloat * SellingPriceValue;
-
+            float result = calc.GetResult(SellingPriceValue, Input.Text);
             Result.Text = result.ToString();
         }
     }

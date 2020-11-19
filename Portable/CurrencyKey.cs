@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace CurrencyConverter.Android
+﻿namespace Portable
 {
     public class CurrencyKey
     {

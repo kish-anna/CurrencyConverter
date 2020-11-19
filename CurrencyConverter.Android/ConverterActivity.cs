@@ -2,72 +2,62 @@
 using Android.App;
 using Android.OS;
 using Android.Widget;
+using Portable;
+
 
 namespace CurrencyConverter.Android
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false)]
     public class ConverterActivity : Activity
     {
+        private ICalc calc;
+        
+        public string CurrencyNameValue = "";
+        public float SellingPriceValue = 0;
+        public float PurchasePriceValue = 0;
+        private EditText userInput;
+        private TextView resultPrice;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            
             SetContentView(Resource.Layout.layout_translation_carrency);
+            
+            calc = new Portable.Result();
 
-            var currencyName = this.Intent.GetStringExtra("currencyName");
+            CurrencyNameValue = this.Intent.GetStringExtra("currencyName");
             var name = FindViewById<TextView>(Resource.Id.textViewKey);
-            name.Text = currencyName;
+            name.Text = CurrencyNameValue;
 
-            var sellPrice = this.Intent.GetFloatExtra("sellingPrice", 0);
+            SellingPriceValue = this.Intent.GetFloatExtra("sellingPrice", 0);
             var sell = FindViewById<TextView>(Resource.Id.sellPrice);
-            sell.Text = sellPrice.ToString();
+            sell.Text = SellingPriceValue.ToString();
 
-            var buyPrice = this.Intent.GetFloatExtra("purchasePrice", 0);
+            PurchasePriceValue = this.Intent.GetFloatExtra("purchasePrice", 0);
             var buy = FindViewById<TextView>(Resource.Id.buyPrice);
-            buy.Text = buyPrice.ToString();
+            buy.Text = PurchasePriceValue.ToString();
 
-            var userInput = FindViewById<EditText>(Resource.Id.userInput);
+            userInput = FindViewById<EditText>(Resource.Id.userInput);
+            resultPrice = FindViewById<TextView>(Resource.Id.resultTextView);
 
             var sellButton = FindViewById<Button>(Resource.Id.SellButton);
             var buyButton = FindViewById<Button>(Resource.Id.BuyButton);
 
-            var resultPrice = FindViewById<TextView>(Resource.Id.resultTextView);
+            sellButton.Click += SellTouch;
+            buyButton.Click += BuyTouch;
 
-            sellButton.Click += delegate
-            {
-                float userInputFloat = 0;
-                
-                try
-                {
-                    userInputFloat = Convert.ToSingle(userInput.Text);
-                }
-                catch (Exception ex)
-                {
-
-                }
-
-                var result = userInputFloat * sellPrice;
-
-                resultPrice.Text = result.ToString();
-            };
-
-            buyButton.Click += delegate
-            {
-                float userInputFloat = 0;
-
-                try
-                {
-                    userInputFloat = Convert.ToSingle(userInput.Text);
-                }
-                catch (Exception ex)
-                {
-
-                }
-
-                var result = userInputFloat * buyPrice;
-
-                resultPrice.Text = result.ToString();
-            };
-
+        }
+        
+        void SellTouch(object sender, EventArgs args)
+        {
+            float result = calc.GetResult(SellingPriceValue, userInput.Text);
+            resultPrice.Text = result.ToString();
+        }
+        
+        void BuyTouch(object sender, EventArgs args)
+        {
+            float result = calc.GetResult(PurchasePriceValue, userInput.Text);
+            resultPrice.Text = result.ToString();
         }
     }
     
