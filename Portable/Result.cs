@@ -12,8 +12,9 @@ namespace Portable
             {
                 userInputFloat = Convert.ToSingle(Input);
             }
-            catch (Exception ex)
+            catch (Exception _)
             {
+                // ignored
             }
 
             return userInputFloat;

@@ -23,6 +23,7 @@ namespace CurrencyConverter.iOS
             var currencyRate = data[indexPath.Row];
 
             cell.UpdateCell(currencyRate);
+            cell.ContentView.Alpha = 0;
 
             return cell;
         }
