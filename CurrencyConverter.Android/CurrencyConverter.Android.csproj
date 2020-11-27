@@ -73,6 +73,16 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\anim\currency_name_anim.xml" />
+    <AndroidResource Include="Resources\anim\go_to_screen_left_out.xml" />
+    <AndroidResource Include="Resources\anim\item_animation_fall_down.xml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\anim\layout_animation_fall_down.xml" />
+    <AndroidResource Include="Resources\anim\result_anim.xml" />
+    <AndroidResource Include="Resources\anim\right_in.xml" />
+    <AndroidResource Include="Resources\anim\user_input_anim.xml" />
     <AndroidResource Include="Resources\layout\activity_main.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -81,6 +91,7 @@
     </AndroidResource>
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
+    <AndroidResource Include="Resources\values\integers.xml" />
     <AndroidResource Include="Resources\values\strings.xml" />
     <AndroidResource Include="Resources\values\styles.xml">
       <IncludeInPackage>false</IncludeInPackage>

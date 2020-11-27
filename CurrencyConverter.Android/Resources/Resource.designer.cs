@@ -249,16 +249,34 @@ namespace CurrencyConverter.Android
 			public const int abc_tooltip_exit = 2130771979;
 			
 			// aapt resource value: 0x7F01000C
-			public const int design_bottom_sheet_slide_in = 2130771980;
+			public const int currency_name_anim = 2130771980;
 			
 			// aapt resource value: 0x7F01000D
-			public const int design_bottom_sheet_slide_out = 2130771981;
+			public const int design_bottom_sheet_slide_in = 2130771981;
 			
 			// aapt resource value: 0x7F01000E
-			public const int design_snackbar_in = 2130771982;
+			public const int design_bottom_sheet_slide_out = 2130771982;
 			
 			// aapt resource value: 0x7F01000F
-			public const int design_snackbar_out = 2130771983;
+			public const int design_snackbar_in = 2130771983;
+			
+			// aapt resource value: 0x7F010010
+			public const int design_snackbar_out = 2130771984;
+			
+			// aapt resource value: 0x7F010011
+			public const int go_to_screen_left_out = 2130771985;
+			
+			// aapt resource value: 0x7F010012
+			public const int item_animation_fall_down = 2130771986;
+			
+			// aapt resource value: 0x7F010013
+			public const int layout_animation_fall_down = 2130771987;
+			
+			// aapt resource value: 0x7F010014
+			public const int right_in = 2130771988;
+			
+			// aapt resource value: 0x7F010015
+			public const int user_input_anim = 2130771989;
 			
 			static Animation()
 			{
@@ -3860,43 +3878,49 @@ namespace CurrencyConverter.Android
 			public const int abc_config_activityShortDur = 2131296257;
 			
 			// aapt resource value: 0x7F090002
-			public const int app_bar_elevation_anim_duration = 2131296258;
+			public const int anim_duration_medium = 2131296258;
 			
 			// aapt resource value: 0x7F090003
-			public const int bottom_sheet_slide_duration = 2131296259;
+			public const int anim_goto_duration = 2131296259;
 			
 			// aapt resource value: 0x7F090004
-			public const int cancel_button_image_alpha = 2131296260;
+			public const int app_bar_elevation_anim_duration = 2131296260;
 			
 			// aapt resource value: 0x7F090005
-			public const int config_tooltipAnimTime = 2131296261;
+			public const int bottom_sheet_slide_duration = 2131296261;
 			
 			// aapt resource value: 0x7F090006
-			public const int design_snackbar_text_max_lines = 2131296262;
+			public const int cancel_button_image_alpha = 2131296262;
 			
 			// aapt resource value: 0x7F090007
-			public const int design_tab_indicator_anim_duration_ms = 2131296263;
+			public const int config_tooltipAnimTime = 2131296263;
 			
 			// aapt resource value: 0x7F090008
-			public const int hide_password_duration = 2131296264;
+			public const int design_snackbar_text_max_lines = 2131296264;
 			
 			// aapt resource value: 0x7F090009
-			public const int mtrl_btn_anim_delay_ms = 2131296265;
+			public const int design_tab_indicator_anim_duration_ms = 2131296265;
 			
 			// aapt resource value: 0x7F09000A
-			public const int mtrl_btn_anim_duration_ms = 2131296266;
+			public const int hide_password_duration = 2131296266;
 			
 			// aapt resource value: 0x7F09000B
-			public const int mtrl_chip_anim_duration = 2131296267;
+			public const int mtrl_btn_anim_delay_ms = 2131296267;
 			
 			// aapt resource value: 0x7F09000C
-			public const int mtrl_tab_indicator_anim_duration_ms = 2131296268;
+			public const int mtrl_btn_anim_duration_ms = 2131296268;
 			
 			// aapt resource value: 0x7F09000D
-			public const int show_password_duration = 2131296269;
+			public const int mtrl_chip_anim_duration = 2131296269;
 			
 			// aapt resource value: 0x7F09000E
-			public const int status_bar_notification_info_maxnum = 2131296270;
+			public const int mtrl_tab_indicator_anim_duration_ms = 2131296270;
+			
+			// aapt resource value: 0x7F09000F
+			public const int show_password_duration = 2131296271;
+			
+			// aapt resource value: 0x7F090010
+			public const int status_bar_notification_info_maxnum = 2131296272;
 			
 			static Integer()
 			{

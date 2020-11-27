@@ -135,6 +135,7 @@
         <Compile Include="CollectionViewController.designer.cs">
           <DependentUpon>CollectionViewController.cs</DependentUpon>
         </Compile>
+        <Compile Include="ElasticView.cs" />
         <Compile Include="Main.cs" />
         <Compile Include="AppDelegate.cs" />
         <Compile Include="SceneDelegate.cs" />

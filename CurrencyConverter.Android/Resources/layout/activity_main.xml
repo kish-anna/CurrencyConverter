@@ -12,7 +12,8 @@
 		android:layout_height="wrap_content"
 		android:layout_marginTop="40dp"
 		android:id="@+id/recyclerView1"
-		android:scrollbars="vertical"/>
+		android:scrollbars="vertical"
+		android:layoutAnimation="@anim/layout_animation_fall_down"/>
     <TextView
 		android:text="Sell"
 		android:layout_width="75dp"

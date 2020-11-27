@@ -14,11 +14,11 @@
 		<TextView
 			android:text="RUB/USD"
 			android:layout_width="match_parent"
-			android:layout_height="60dp"
+			android:layout_height="80dp"
 			android:id="@+id/textViewKey"
 			android:textColor="@android:color/white"
 			android:gravity="center"
-			android:textSize="@dimen/abc_action_bar_content_inset_material"/>
+			android:textSize="24dp"/>
 
 	</RelativeLayout>
 	<EditText
@@ -29,10 +29,10 @@
 		android:text = "0"
 		android:textColor="@android:color/black"
 		android:layout_width="200dp"
-		android:layout_height="60dp"
+		android:layout_height="35dp"
 		android:inputType="numberDecimal"
 		android:layout_centerHorizontal="true"
-		android:layout_marginTop="61dp"
+		android:layout_marginTop="78dp"
 		android:background="#FFFFFF"
 		android:textCursorDrawable="@null"
 		android:ems="10"

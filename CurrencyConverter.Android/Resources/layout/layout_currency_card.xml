@@ -10,14 +10,14 @@
 		android:orientation="horizontal"
 		android:layout_width="match_parent"
 		android:layout_marginTop="1dp"
-		android:layout_height="50dp"
+		android:layout_height="150dp"
 		android:id="@+id/linearLayout1"
 		android:minWidth="25px"
 		android:minHeight="25px"
 		android:layout_marginBottom="0.0dp">
 		<TextView
 			android:text="CurrencyName"
-			android:textSize="@dimen/abc_action_bar_content_inset_material"
+			android:textSize="28dp"
 			android:gravity="left"
 			android:layout_width="160.0dp"
 			android:layout_height="match_parent"
@@ -27,7 +27,7 @@
 
 		<TextView
 			android:text="Selling price"
-			android:textSize="@dimen/abc_action_bar_content_inset_material"
+			android:textSize="28dp"
 			android:gravity="center"
 			android:layout_width="75dp"
 			android:layout_height="match_parent"
@@ -36,7 +36,7 @@
 			android:textColor="@android:color/white"/>
 		<TextView
 			android:text="PurchasePrice"
-			android:textSize="@dimen/abc_action_bar_content_inset_material"
+			android:textSize="28dp"
 			android:gravity="center"
 			android:layout_width="75dp"
 			android:layout_height="match_parent"

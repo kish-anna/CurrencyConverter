@@ -3,6 +3,7 @@ using Android.App;
 using Android.OS;
 using Android.Widget;
 using Portable;
+using Android.Views.Animations;
 
 
 namespace CurrencyConverter.Android
@@ -20,14 +21,18 @@ namespace CurrencyConverter.Android
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            
+
             SetContentView(Resource.Layout.layout_translation_carrency);
-            
+
+            Animation currencyNameAnimation = AnimationUtils.LoadAnimation(this, Resource.Animation.currency_name_anim);
+            Animation userInputAnimation = AnimationUtils.LoadAnimation(this, Resource.Animation.user_input_anim);
+
             calc = new Portable.Result();
 
             CurrencyNameValue = this.Intent.GetStringExtra("currencyName");
             var name = FindViewById<TextView>(Resource.Id.textViewKey);
             name.Text = CurrencyNameValue;
+            name.StartAnimation(currencyNameAnimation);
 
             SellingPriceValue = this.Intent.GetFloatExtra("sellingPrice", 0);
             var sell = FindViewById<TextView>(Resource.Id.sellPrice);
@@ -38,6 +43,9 @@ namespace CurrencyConverter.Android
             buy.Text = PurchasePriceValue.ToString();
 
             userInput = FindViewById<EditText>(Resource.Id.userInput);
+            var input = FindViewById<TextView>(Resource.Id.userInput);
+            input.StartAnimation(userInputAnimation);
+            
             resultPrice = FindViewById<TextView>(Resource.Id.resultTextView);
 
             var sellButton = FindViewById<Button>(Resource.Id.SellButton);
@@ -45,7 +53,7 @@ namespace CurrencyConverter.Android
 
             sellButton.Click += SellTouch;
             buyButton.Click += BuyTouch;
-
+ 
         }
         
         void SellTouch(object sender, EventArgs args)

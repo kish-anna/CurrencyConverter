@@ -1,6 +1,5 @@
 ﻿using System;
 using CoreGraphics;
-using Foundation;
 using UIKit;
 using Portable;
 
@@ -11,21 +10,26 @@ namespace CurrencyConverter.iOS
         public string CurrencyNameValue = "";
         public float SellingPriceValue = 0;
         public float PurchasePriceValue = 0;
+        private nfloat x;
 
         private ICalc calc;
+        private UIFont standart;
 
         public ViewResultController(IntPtr handle) : base(handle)
         {
             calc = new Result();
+            
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+                
+            x = CurrencyName.Frame.X;
+            standart = SellPrice.Font;
 
+            CurrencyName.Frame = new CGRect(x: - (CurrencyName.Frame.Width), y: CurrencyName.Frame.Y, width: CurrencyName.Frame.Width, height: CurrencyName.Frame.Height);
             Input.Alpha = 0;
-
-            
             
 
             CurrencyName.Text = CurrencyNameValue;
@@ -42,38 +46,34 @@ namespace CurrencyConverter.iOS
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-
-            // Input.Alpha = 0;
-            // CurrencyName.Alpha = 0;
-
+            
+            UIView.Animate(2, () =>
+            {
+                CurrencyName.Frame = new CGRect(x: x, y: CurrencyName.Frame.Y, width:  CurrencyName.Frame.Width, height: CurrencyName.Frame.Height);
+             });
+            
             UIView.Animate(1, () => { Input.Alpha = 1; });
-            
-            UIView.Animate(1, () =>
-                {
-                    CurrencyName.Frame = new CGRect(x: 100, y: 100, width: 220, height: 60);
-                    Result.Center = View.Center;
-                });
-            
-            
         }
 
         void BuyTouch(object sender, EventArgs args)
         {
             float result = calc.GetResult(PurchasePriceValue, Input.Text);
             Result.Text = result.ToString();
+
             UIView.Animate(1, () =>
                 {
-                    Result.Frame = new CGRect(x: 0, y: 0, width: 250, height: 80);
-                    Result.Center = View.Center;
-                    Result.TextColor = UIColor.White;
+                    Result.Frame = new CGRect(x: Result.Frame.X - 15, y: Result.Frame.Y - 10, width: Result.Frame.Width + 30, height: Result.Frame.Height + 20);
+                    Result.TextColor = UIColor.Red;
                     BuyButton.BackgroundColor = UIColor.DarkGray;
+                    BuyPrice.TextColor = UIColor.Black;
+                    
                 },
                 () => { UIView.Animate(1, () =>
                 {
-                    Result.Frame = new CGRect(x: 0, y: 0, width: 220, height: 60);
-                    Result.Center = View.Center;
-                    Result.TextColor = UIColor.Red;
+                    Result.Frame = new CGRect(x: Result.Frame.X + 15, y: Result.Frame.Y + 10, width:  Result.Frame.Width - 30, height: Result.Frame.Height - 20);
+                    Result.TextColor = UIColor.White;
                     BuyButton.BackgroundColor = UIColor.SystemGray4Color;
+                    BuyPrice.TextColor = UIColor.White;
                     
                 }); });
         }
@@ -85,18 +85,19 @@ namespace CurrencyConverter.iOS
             
             UIView.Animate(1, () =>
                 {
-                    Result.Frame = new CGRect(x: 0, y: 0, width: 250, height: 80);
-                    Result.Center = View.Center;
-                    Result.TextColor = UIColor.White;
+                    Result.Frame = new CGRect(x: Result.Frame.X - 15, y: Result.Frame.Y - 10, width: Result.Frame.Width + 30, height: Result.Frame.Height + 20);
+                    Result.TextColor = UIColor.Red;
                     SellButton.BackgroundColor = UIColor.DarkGray;
+                    SellPrice.Font = SellPrice.Font.WithSize(50f);
+                    SellPrice.TextColor = UIColor.Black;
                 },
                 () => { UIView.Animate(1, () =>
                 {
-                    Result.Frame = new CGRect(x: 0, y: 0, width: 220, height: 60);
-                    Result.Center = View.Center;
-                    Result.TextColor = UIColor.Red;
+                    Result.Frame = new CGRect(x: Result.Frame.X + 15, y: Result.Frame.Y + 10, width:  Result.Frame.Width - 30, height: Result.Frame.Height - 20);
+                    Result.TextColor = UIColor.White;
                     SellButton.BackgroundColor = UIColor.SystemGray4Color;
-                    
+                    SellPrice.Font = standart;
+                    SellPrice.TextColor = UIColor.White;
                 }); });
         }
     }

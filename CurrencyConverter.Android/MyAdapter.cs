@@ -1,4 +1,5 @@
 ﻿using System;
+using Android.App;
 using Android.Content;
 using Android.Support.V7.Widget;
 using Android.Views;
@@ -10,9 +11,9 @@ namespace CurrencyConverter.Android
     {
         CurrencyKey[] items;
         RecyclerView recyclerView;
-        Context context;
+        Activity context;
 
-        public MyAdapter(Context context, RecyclerView recyclerView, CurrencyKey[] data)
+        public MyAdapter(Activity context, RecyclerView recyclerView, CurrencyKey[] data)
         {
             this.recyclerView = recyclerView;
             items = data;
@@ -55,8 +56,8 @@ namespace CurrencyConverter.Android
             intent.PutExtra("sellingPrice", items[pos].SellingPrice);
             intent.PutExtra("purchasePrice", items[pos].PurchasePrice);
 
-
             context.StartActivity(intent);
+            context.OverridePendingTransition(Resource.Animation.right_in, Resource.Animation.go_to_screen_left_out);
         }
 
         public override int ItemCount

@@ -1,7 +1,10 @@
-﻿using Android.App;
+﻿using System.Runtime.Remoting.Contexts;
+using Android.App;
 using Android.OS;
 using Android.Support.V7.Widget;
 using Portable;
+using Android.Views.Animations;
+using Context = Android.Content.Context;
 
 namespace CurrencyConverter.Android
 {
@@ -18,11 +21,12 @@ namespace CurrencyConverter.Android
             var layoutManager = new LinearLayoutManager(this) { Orientation = LinearLayoutManager.Vertical };
             rView.SetLayoutManager(layoutManager);
             rView.HasFixedSize = true;
-            
+
             // Plug in my adapter:
             var adapter = new MyAdapter(this, rView, CurrencyKeyData.Data);
             rView.SetAdapter(adapter);
         }
+        
         //public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         //{
         //    base.OnRequestPermissionsResult(requestCode, permissions, grantResults);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Foundation;
 using UIKit;
 
@@ -26,13 +27,14 @@ namespace CurrencyConverter.iOS
             }
 
             anim();
-            var cellSelected = CollectionView.GetIndexPathsForSelectedItems();
         }
 
         private Action AddAnim(Action anim, Action completion)
         {
             return delegate { UIView.Animate(1, anim, completion); };
         }
+        
+        
 
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
@@ -47,6 +49,15 @@ namespace CurrencyConverter.iOS
                 {
                     return;
                 }
+                
+                UIView.Animate(1, () =>
+                {
+                    cell.BackgroundColor = UIColor.DarkGray;
+                },
+                () => { 
+                    cell.BackgroundColor = UIColor.Clear;
+                });
+
 
                 controller.CurrencyNameValue = cell.CurrencyKey.CurrencyName;
                 controller.SellingPriceValue = cell.CurrencyKey.SellingPrice;
