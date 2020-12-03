@@ -25,6 +25,7 @@ namespace CurrencyConverter.Android
             // Plug in my adapter:
             var adapter = new MyAdapter(this, rView, CurrencyKeyData.Data);
             rView.SetAdapter(adapter);
+            
         }
         
         //public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

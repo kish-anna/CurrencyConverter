@@ -10,7 +10,8 @@
 	<RelativeLayout
 		android:layout_width="match_parent"
 		android:layout_height="60dp"
-		android:id="@+id/relativeLayout2">
+		android:id="@+id/relativeLayout2"
+		android:layout_marginTop="15dp">
 		<TextView
 			android:text="RUB/USD"
 			android:layout_width="match_parent"
@@ -18,7 +19,8 @@
 			android:id="@+id/textViewKey"
 			android:textColor="@android:color/white"
 			android:gravity="center"
-			android:textSize="24dp"/>
+			android:textSize="24dp"
+			/>
 
 	</RelativeLayout>
 	<EditText
@@ -58,7 +60,7 @@
 		android:gravity="center"
 		android:textColor="@android:color/white"
 		android:textStyle="bold"
-		android:textSize="30dp"/>
+		android:textSize="26dp"/>
 	<Button
 		android:text="BuyPrice"
 		android:layout_width="100dp"
@@ -80,7 +82,7 @@
 		android:gravity="center"
 		android:textColor="@android:color/white"
 		android:textStyle="bold"
-		android:textSize="30dp"/>
+		android:textSize="26dp"/>
 	<TextView
 		android:id="@+id/resultTextView"
 		android:gravity = "right|center"

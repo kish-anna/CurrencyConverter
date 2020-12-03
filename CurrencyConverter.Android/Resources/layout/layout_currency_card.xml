@@ -3,14 +3,14 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_marginTop="1dp"
-	android:layout_height="40dp"
+	android:layout_height="70dp"
 	android:gravity = "center_vertical"
 	android:background="@color/primary_dark_material_dark">
 	<LinearLayout
 		android:orientation="horizontal"
 		android:layout_width="match_parent"
 		android:layout_marginTop="1dp"
-		android:layout_height="150dp"
+		android:layout_height="70dp"
 		android:id="@+id/linearLayout1"
 		android:minWidth="25px"
 		android:minHeight="25px"
@@ -18,7 +18,7 @@
 		<TextView
 			android:text="CurrencyName"
 			android:textSize="28dp"
-			android:gravity="left"
+			android:gravity="center"
 			android:layout_width="160.0dp"
 			android:layout_height="match_parent"
 			android:id="@+id/CurrencyName"

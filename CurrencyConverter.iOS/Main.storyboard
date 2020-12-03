@@ -121,7 +121,7 @@
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Zw-I4-vZp">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Zw-I4-vZp" customClass="ElasticTextField">
                                 <rect key="frame" x="98" y="183" width="220" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,6 +131,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="98" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aX6-Ul-J1J">
                                 <rect key="frame" x="98" y="300" width="100" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066879638500000005" green="0.56317658500000001" blue="0.72631962439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -157,11 +158,6 @@
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWX-92-lLr" customClass="ElasticView">
-                                <rect key="frame" x="87" y="507" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="ViewColor"/>
                     </view>
@@ -170,7 +166,7 @@
                         <outlet property="BuyButton" destination="h23-CY-5Ih" id="name-outlet-h23-CY-5Ih"/>
                         <outlet property="BuyPrice" destination="NFO-jU-Tym" id="name-outlet-NFO-jU-Tym"/>
                         <outlet property="CurrencyName" destination="6FY-BJ-S9G" id="name-outlet-6FY-BJ-S9G"/>
-                        <outlet property="Input" destination="7Zw-I4-vZp" id="name-outlet-7Zw-I4-vZp"/>
+                        <outlet property="Input" destination="7Zw-I4-vZp" id="3BG-I9-tyZ"/>
                         <outlet property="Result" destination="I5W-LS-fMk" id="name-outlet-I5W-LS-fMk"/>
                         <outlet property="SellButton" destination="uYt-3o-J5n" id="name-outlet-uYt-3o-J5n"/>
                         <outlet property="SellPrice" destination="aX6-Ul-J1J" id="name-outlet-aX6-Ul-J1J"/>
@@ -190,9 +186,6 @@
         </systemColor>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -249,34 +249,49 @@ namespace CurrencyConverter.Android
 			public const int abc_tooltip_exit = 2130771979;
 			
 			// aapt resource value: 0x7F01000C
-			public const int currency_name_anim = 2130771980;
+			public const int buy_buttom_anim = 2130771980;
 			
 			// aapt resource value: 0x7F01000D
-			public const int design_bottom_sheet_slide_in = 2130771981;
+			public const int buy_price_anim = 2130771981;
 			
 			// aapt resource value: 0x7F01000E
-			public const int design_bottom_sheet_slide_out = 2130771982;
+			public const int currency_name_anim = 2130771982;
 			
 			// aapt resource value: 0x7F01000F
-			public const int design_snackbar_in = 2130771983;
+			public const int design_bottom_sheet_slide_in = 2130771983;
 			
 			// aapt resource value: 0x7F010010
-			public const int design_snackbar_out = 2130771984;
+			public const int design_bottom_sheet_slide_out = 2130771984;
 			
 			// aapt resource value: 0x7F010011
-			public const int go_to_screen_left_out = 2130771985;
+			public const int design_snackbar_in = 2130771985;
 			
 			// aapt resource value: 0x7F010012
-			public const int item_animation_fall_down = 2130771986;
+			public const int design_snackbar_out = 2130771986;
 			
 			// aapt resource value: 0x7F010013
-			public const int layout_animation_fall_down = 2130771987;
+			public const int go_to_screen_left_out = 2130771987;
 			
 			// aapt resource value: 0x7F010014
-			public const int right_in = 2130771988;
+			public const int item_animation_fall_down = 2130771988;
 			
 			// aapt resource value: 0x7F010015
-			public const int user_input_anim = 2130771989;
+			public const int layout_animation_fall_down = 2130771989;
+			
+			// aapt resource value: 0x7F010016
+			public const int result_anim = 2130771990;
+			
+			// aapt resource value: 0x7F010017
+			public const int right_in = 2130771991;
+			
+			// aapt resource value: 0x7F010018
+			public const int sell_buttom_anim = 2130771992;
+			
+			// aapt resource value: 0x7F010019
+			public const int sell_price_anim = 2130771993;
+			
+			// aapt resource value: 0x7F01001A
+			public const int user_input_anim = 2130771994;
 			
 			static Animation()
 			{

@@ -26,8 +26,11 @@ namespace CurrencyConverter.iOS
 		UIKit.UITextView CurrencyName { get; set; }
 
 		[Outlet]
+		CurrencyConverter.iOS.EView EView { get; set; }
+
+		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIKit.UITextField Input { get; set; }
+		CurrencyConverter.iOS.ElasticTextField Input { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -56,6 +59,11 @@ namespace CurrencyConverter.iOS
 			if (CurrencyName != null) {
 				CurrencyName.Dispose ();
 				CurrencyName = null;
+			}
+
+			if (EView != null) {
+				EView.Dispose ();
+				EView = null;
 			}
 
 			if (Input != null) {

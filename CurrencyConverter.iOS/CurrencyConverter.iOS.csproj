@@ -135,10 +135,17 @@
         <Compile Include="CollectionViewController.designer.cs">
           <DependentUpon>CollectionViewController.cs</DependentUpon>
         </Compile>
-        <Compile Include="ElasticView.cs" />
+        <Compile Include="ElasticTextField.cs" />
+        <Compile Include="ElasticTextField.designer.cs" />
+        <Compile Include="EView.cs" />
+        <Compile Include="EView.designer.cs">
+          <DependentUpon>EView.cs</DependentUpon>
+        </Compile>
         <Compile Include="Main.cs" />
         <Compile Include="AppDelegate.cs" />
-        <Compile Include="SceneDelegate.cs" />
+        <Compile Include="SceneDelegate.cs">
+          <DependentUpon>ViewResultController.cs</DependentUpon>
+        </Compile>
         <Compile Include="CurrencyCollectionView.cs" />
         <Compile Include="CurrencyCollectionView.designer.cs">
           <DependentUpon>CurrencyCollectionView.cs</DependentUpon>
