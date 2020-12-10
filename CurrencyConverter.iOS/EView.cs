@@ -132,7 +132,7 @@ namespace CurrencyConverter.iOS
 
         public void animateControlPoints()
         {
-            var overshootAmount = 40.0f;
+            var overshootAmount = 30.0f;
             //
             // var springAnimation = new CASpringAnimation();
             // springAnimation.Duration = 0.25;
